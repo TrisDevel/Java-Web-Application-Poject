@@ -2,12 +2,8 @@
 
 ## Introduction
 
-**3connguoi Team**
-
-Members:   
-- Mai Tuấn Huy
-- Bùi Trọng Trí
-- Vũ Anh Đức
+**3connguoi**
+Author: Bùi Trọng Trí
 ## Target User
 
 The primary target audience for this project comprises young adults.
