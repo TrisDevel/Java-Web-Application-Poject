@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/src/java/ClothesOnlineShop/Controller/Web/Handle/DispatchServlet.java</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/src/java/ClothesOnlineShop/Model/ProductDTO.java</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/src/java/ClothesOnlineShop/Controller/Admin/Management/Users/ManagementUser.java</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/src/java/ClothesOnlineShop/Controller/Web/login/LogoutController.java</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/src/java/ClothesOnlineShop/Model/Cart.java</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/web/view/admin-UI/products.jsp</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/src/java/ClothesOnlineShop/Controller/Web/Shop/CheckoutController.java</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/web/view/admin-UI/edit-user.jsp</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/web/view/admin-UI/login.jsp</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/web/view/web/cart.jsp</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/src/java/ClothesOnlineShop/Controller/Web/Shop/ProcessCartController.java</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/src/java/ClothesOnlineShop/Controller/Web/login/HomeController.java</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/web/view/admin-UI/accounts.jsp</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/web/view/admin-UI/edit-product.jsp</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/web/view/admin-UI/orders.jsp</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/src/java/ClothesOnlineShop/DAO/ProductDAO.java</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/web/view/admin-UI/index.jsp</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/web/WEB-INF/web.xml</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/web/view/admin-UI/order-details.jsp</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/src/java/ClothesOnlineShop/DAO/AdminDAO.java</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/src/java/ClothesOnlineShop/Controller/Web/Shop/CartController.java</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/src/java/ClothesOnlineShop/Controller/Admin/Management/Product/InsertProductServlet.java</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/src/java/ClothesOnlineShop/Model/OderDetailDTO.java</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/web/view/admin-UI/add-product.jsp</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/web/view/web/product-detail.jsp</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/src/java/ClothesOnlineShop/Controller/Admin/Management/Product/UpdateProductServlet.java</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/web/view/web/login.jsp</file>
+            <file>file:/E:/Project/Github/prj301-24su-se1830-01/Project_Clothes-Online-Shop/src/java/ClothesOnlineShop/Controller/Admin/Management/Product/DeleteProductServlet.java</file>
+        </group>
+    </open-files>
+</project-private>
