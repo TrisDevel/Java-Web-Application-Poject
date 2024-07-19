@@ -138,15 +138,13 @@ Monitoring and Maintenance: Ensure the website operates stably, with monitoring 
 
 1. **Những vấn đề đã gặp phải**
 
- - **Làm việc nhóm**: Thiếu kinh nghiệm về khả năng làm việc nhóm như xảy ra các xung đột về ý tưởng riêng khó thống nhất chung dẫn đến chậm tiến độ (Đã giải quyết).
-
- - **Tiến độ**: Mặc dù đã bắt đầu thực hiện dự án khá sớm tuy nhiên đó cũng là lý do cả nhóm phải tốn rất nhiều thời gian để sửa. Vì lúc bắt đầu chưa có đủ kiến thức để hiểu cách hoạt động của một trang web là như thế nào nên chỉ chú trọng thời gian để thiết kế FE (Frond-End) nhưng không nghĩ đến việc thuận tiện cho BE (Back-End).
+ - **Tiến độ**: Mặc dù đã bắt đầu thực hiện dự án khá sớm tuy nhiên đó cũng là lý do phải tốn rất nhiều thời gian để sửa. Vì lúc bắt đầu chưa có đủ kiến thức để hiểu cách hoạt động của một trang web là như thế nào nên chỉ chú trọng thời gian để thiết kế FE (Frond-End) nhưng không nghĩ đến việc thuận tiện cho BE (Back-End).
 
  2. **Những thứ đã học được**
 
- - **Kiến thức chuyên môn**: Sau khi trãi qua tự làm một dự án trang web bán hàng, thì nhóm đã học được những kiến thức như cách hoạt động của một trang web, cách xây dựng trang web bằng java, thế nào là một trang web e-commerce ...
+ - **Kiến thức chuyên môn**: Sau khi trãi qua tự làm một dự án trang web bán hàng, thì tôi đã học được những kiến thức như cách hoạt động của một trang web, cách xây dựng trang web bằng java, thế nào là một trang web e-commerce ...
  
- - **Kinh nghiệm làm việc**: Biết được kế hoạch trước khi bắt đầu một dự án là vô cùng quan trọng vì nó sẽ tiết kiệm rất nhiều thời gian về sau, tương tác và góp ý của các thành viên trong nhóm để tránh xung đột dẫn đến mất thời gian.
+ - **Kinh nghiệm làm việc**: Biết được kế hoạch trước khi bắt đầu một dự án là vô cùng quan trọng vì nó sẽ tiết kiệm rất nhiều thời gian về sau.
 
 
 

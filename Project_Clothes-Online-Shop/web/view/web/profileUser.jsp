@@ -1,5 +1,12 @@
+<%-- 
+    Document   : profileUser
+    Created on : Jul 16, 2024, 11:44:00 AM
+    Author     : buitr
+--%>
+
 <%@page import="ClothesOnlineShop.Model.UserDTO"%>
-<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +29,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
-        <link rel="stylesheet" type="text/css" href="view/assets/user-UI/CSS/style-contact.css">
+        <link rel="stylesheet" type="text/css" href="view/assets/user-UI/CSS/style-profile.css">
         <title>Clothes online shop</title>
         <style>
             li {
@@ -66,10 +73,8 @@
                             <div class="login">
                                 <% UserDTO user = (UserDTO) session.getAttribute("usersession"); %>
                                 <% if (user != null) {%>
-                                <a href="ProfileControlller?id=<%= user.getIdCustomer()%>">
-                                    <i class="fa-regular fa-user"></i>
-                                    <p><%= user.getLastName()%></p>
-
+                                <a href="DispatchServlet?action=logout">
+                                    <i class="fa fa-sign-out-alt"></i>
                                 </a>
                                 <% } else { %>
                                 <a href="DispatchServlet?action=login">
@@ -81,60 +86,43 @@
                     </div>
                 </div>
         </div>
-        <main>
-            <div class="container main-content" style="padding-top: 150px;">
+
+        <div style="margin-top: 120px">
+            <div class="container rounded bg-white mt-5 mb-5">
                 <div class="row">
-                    <div style="text-align: center;" class="col-lg-8">
-                        <p><i class="fa-solid fa-folder"></i></p>
-                        <h2> INFORMATION ABOUT 3CONNGUOI STORE SYSTEM</h2>
-                        <p style="color: gray; margin: 18px;"><span style="margin-right: 10px;">Posted by: Vu Anh Duc</span> |
-                            <span style="margin-left: 10px;">03/06/2024</span>
-                        </p>
-                        <h1 style="font-weight: 550;margin: 28px;">SHOP SYSTEM</h1>
-                        <h3 style="font-weight: 550;margin: 18px;">Ho Chi Minh Branch:</h3>
-                        <ul style="list-style-type: none;">
-                            <li><i class="fa-solid fa-check"></i> District 1: 160 Nguyen Cu Trinh, Ward Nguyen Cu Trinh.
-                            </li>
-                            <li> <i class="fa-solid fa-check"></i> District 1: 160 Nguyen Cu Trinh, Ward Nguyen Cu Trinh.
-                            </li>
-                            <li><i class="fa-solid fa-check"></i> District 1 - The New Playground: 26 Ly Tu Trong, Ben Nghe
-                                Ward.</li>
-                        </ul>
-                        <p style="margin: 18px; font-size: 20px;"><span style="margin-right: 10px;">0965 233 198 </span> -
-                            <span style="margin-left: 10px;">0383 276 199</span></p>
-                        <p style="margin: 18px; font-size: 20px;">3connguoishop@gmail.com</p>
-                        <P style="text-align: left;margin: 30px;margin-bottom: 10px;">SHARE POST</P>
-                        <p style="font-size: 30px;text-align: left;margin-left: 30px;"><i class="fa-brands fa-tiktok"></i> <i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-twitter"></i></p>
-
+                    <div class="col-md-3 border-right">
+                        <c:choose>
+                            <c:when test="${requestScope.user.gender == 'Male'}">
+                                <img class="rounded-circle mt-5" width="150px" src="https://static.vecteezy.com/system/resources/previews/002/002/403/non_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"><span class="text-black-50">${requestScope.user.email}</span>
+                            </c:when>
+                            <c:otherwise>
+                                <img class="rounded-circle mt-5" width="150px" src="https://static.vecteezy.com/system/resources/previews/002/002/253/non_2x/beautiful-woman-wearing-sunglasses-avatar-character-icon-free-vector.jpg"><span class="text-black-50">${requestScope.user.email}</span>
+                                </c:otherwise>
+                            </c:choose>
                     </div>
-                    <div class="col-lg-4">
-                        <h3>SHOP NEWS</h3>
-                        <hr>
-                        <form style="position: relative;">
-                            <input style="box-shadow: 5px 5px 5px 5px lightgrey;" class="form-control" type="search" placeholder="Search">
-                            <i class="fa-solid fa-magnifying-glass" style="position: absolute; top: 10px;right: 10px;"></i>
-                        </form>
-                        <hr>
-
-                        <ul style="list-style-type: none;padding: 0;">
-                            <li><a href="#"><i class="fa-solid fa-pen-fancy"></i> 3connguoi unveils new collection with bold Y2K style</a></li>
-                            <li><a href="#"><i class="fa-solid fa-pen-fancy"></i> Feminine or edgy? Find the answer at 3connguoi</a></li>
-                            <li><a href="#"><i class="fa-solid fa-pen-fancy"></i> Explore unique ways to express your love at 3connguoi</a></li>
-                            <li><a href="#"><i class="fa-solid fa-pen-fancy"></i> How to shine in your outfit while still keeping a normal appearance?</a></li>
-                            <li><a href="#"><i class="fa-solid fa-pen-fancy"></i> Analysis of how Y2K has changed perceptions of modern fashion</a></li>
-                            <li><a href="#"><i class="fa-solid fa-pen-fancy"></i> The secret to mixing simple yet stylish outfits with 3connguoi</a></li>
-                            <li><a href="#"><i class="fa-solid fa-pen-fancy"></i> How to create a personalized and edgy streetwear style with products from 3connguoi?</a></li>
-                            <li><a href="#"><i class="fa-solid fa-pen-fancy"></i> 3connguoi - Where to discover the latest fashion trends of the year</a></li>
-                            <li><a href="#"><i class="fa-solid fa-pen-fancy"></i> How to create a unique and individual outfit with products from 3connguoi?</a></li>
-                            <li><a href="#"><i class="fa-solid fa-pen-fancy"></i> Step into the world of Y2K: Fashion inspiration from the 2000s</a></li>
-                            <li><a href="#"><i class="fa-solid fa-pen-fancy"></i> DirtyCoins x One Piece Season 2: The perfect blend of manga and fashion</a></li>
-                            <li><a href="#"><i class="fa-solid fa-pen-fancy"></i> Explore the latest collection from 3connguoi: When workwear meets streetwear</a></li>
-                            <li><a href="#"><i class="fa-solid fa-pen-fancy"></i> Why 'unconventional' style is the trend among today's youth?</a></li>
-                        </ul>
+                    <div class="col-md-9 border-right">
+                        <div class="p-3 py-5">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4 class="text-right">Profile Settings</h4>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-md-6"><label class="labels">First Name</label><input type="text" class="form-control" placeholder="first name" value="${requestScope.user.lastName}"></div>
+                                <div class="col-md-6"><label class="labels">Last Name</label><input type="text" class="form-control" value="${requestScope.user.firstName}" placeholder="surname"></div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number" value="${requestScope.user.phoneNumber}"></div>
+                                <div class="col-md-12"><label class="labels">Address</label><input type="text" class="form-control" placeholder="enter address line 1" value="${requestScope.user.address}"></div>
+                                <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id" value="${requestScope.user.email}"></div>
+                                <div class="col-md-12"><label class="labels">Education</label><input type="text" class="form-control" placeholder="education" value=""></div>
+                            </div>
+                            <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                            <div class="mt-5 text-center"><button class="btn btn-primary logout-button" type="button">Logout</button></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
+
         <footer class="footer">
             <div class="footer-top">
                 <div class="row">
@@ -188,7 +176,5 @@
                 <p>&copy; 2024 3Connguoi Studio. All Rights Reserved.</p>
             </div>
         </footer>
-        <script src="scripts.js"></script>
     </body>
-
 </html>

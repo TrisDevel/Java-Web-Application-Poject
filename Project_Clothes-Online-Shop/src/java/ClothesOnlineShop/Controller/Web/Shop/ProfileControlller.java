@@ -1,8 +1,12 @@
-package ClothesOnlineShop.Controller.Web.login;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ClothesOnlineShop.Controller.Web.Shop;
 
 import ClothesOnlineShop.DAO.UserDAO;
 import ClothesOnlineShop.Model.UserDTO;
-import ClothesOnlineShop.utils.DBUtils;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -15,38 +19,21 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author buitr
  */
-@WebServlet(name = "RegisterController", urlPatterns = {"/RegisterController"})
-public class RegisterController extends HttpServlet {
+@WebServlet(name = "ProfileController", urlPatterns = {"/ProfileControlller"})
+public class ProfileControlller extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.setCharacterEncoding("UTF-8");
-        response.setCharacterEncoding("UTF-8");
-        try {
-
-            String firstName = request.getParameter("firstName");
-            String lastName = request.getParameter("lastName");
-            String userName = request.getParameter("userName");
-            String email = request.getParameter("email");
-            String phoneNumber = request.getParameter("phoneNumber");
-            String address = request.getParameter("address");
-            String password = request.getParameter("password");
-
-            UserDAO userDao = new UserDAO();
-
-            // Check if the username already exists
-            if (userDao.isUserExists(userName)) {
-                request.setAttribute("msgRegister", "Username already taken. Please choose another username.");
-                request.getRequestDispatcher("view/web/login.jsp").forward(request, response);
-            } else {
-                // Create a new user
-                UserDTO newUser = new UserDTO(0, firstName, lastName, userName, password, address, "Unknown", email, phoneNumber);
-                userDao.insertCustomer(newUser);
-                response.sendRedirect("DispatchServlet");
-            }
-
-        } catch (Exception e) {
-
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            int id =Integer.parseInt(request.getParameter("id")) ;
+            
+            UserDAO uDao = new UserDAO();
+            UserDTO user = uDao.selectCustomer(id);
+           
+            
+            request.setAttribute("user", user);
+            request.getRequestDispatcher("view/web/profileUser.jsp").forward(request, response);
         }
     }
 

@@ -6,8 +6,10 @@
 package ClothesOnlineShop.Controller.Web.Handle;
 
 import ClothesOnlineShop.DAO.ProductDAO;
+import ClothesOnlineShop.DAO.UserDAO;
 import ClothesOnlineShop.Model.Cart;
 import ClothesOnlineShop.Model.ProductDTO;
+import ClothesOnlineShop.Model.UserDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -28,6 +30,7 @@ public class DispatchServlet extends HttpServlet {
     private final String LOGIN = "login";
     private final String LOGOUT = "logout";
     private final String ADMIN = "AdminServlet";
+    private final String PROFILE_USER = "view/web/profileUser.jsp";
     private final String WELCOME = "view/web/home.jsp";
     private final String WELCOME_LOGIN = "view/web/login.jsp";
     private final String LOGIN_CONTROLlER = "view/web/login.jsp";
@@ -50,6 +53,8 @@ public class DispatchServlet extends HttpServlet {
                 url = LOGIN_CONTROLlER;
             } else if (btnValue.equals("admin")) {
                 url = ADMIN;
+            } else if (btnValue.equals("account")) {
+                url = PROFILE_USER;
             }
 
         } catch (Exception ex) {
@@ -62,17 +67,18 @@ public class DispatchServlet extends HttpServlet {
     protected void getDataHomeLSP(HttpServletRequest request, HttpServletResponse response) {
         try {
             ProductDAO pDao = new ProductDAO();
-            
-            String keyword = request.getParameter("keyword");            
-            if (keyword == null) keyword = "";
-            
+            UserDAO uDao = new UserDAO();
+            String keyword = request.getParameter("keyword");
+            if (keyword == null) {
+                keyword = "";
+            }
+
             List<ProductDTO> allProduct = pDao.selectAllProducts(keyword);
             List<ProductDTO> bestSellers = pDao.getBestSellers();
 
-           
             request.setAttribute("bestSellers", bestSellers);
             request.setAttribute("allProduct", allProduct);
-           
+
         } catch (Exception ex) {
             log("DispatchServlet error:" + ex.getMessage());
         }

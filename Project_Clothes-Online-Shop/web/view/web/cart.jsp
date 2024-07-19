@@ -51,7 +51,7 @@
                     </div>
                     <div class="col-lg-5">
                         <div>
-                            
+
                             <div class="cart">
                                 <a href="web/cart.jsp">
                                     <i class="fa fa-shopping-cart"></i>
@@ -60,8 +60,10 @@
                             <div class="login">
                                 <% UserDTO user = (UserDTO) session.getAttribute("usersession"); %>
                                 <% if (user != null) {%>
-                                <a href="DispatchServlet?action=logout">
-                                    <i class="fa fa-sign-out-alt"></i>
+                                <a href="ProfileControlller?id=<%= user.getIdCustomer()%>">
+                                    <i class="fa-regular fa-user"></i>
+                                    <p><%= user.getLastName()%></p>
+
                                 </a>
                                 <% } else { %>
                                 <a href="DispatchServlet?action=login">
